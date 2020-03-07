@@ -19,8 +19,10 @@ pipeline {
     }
      
     stage('Run kubectl') {
-      container('kubectl') {
-        sh "kubectl get pods"
+          steps {
+	      container('kubectl') {
+	        sh "kubectl get pods"
+	      }
       }
     }
   }
