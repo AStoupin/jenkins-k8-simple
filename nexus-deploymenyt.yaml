@@ -1,4 +1,16 @@
-
+apiVersion: v1
+kind: Service
+metadata:
+  name: nexus-ext
+  labels:
+    app: nexus
+spec:
+  selector:
+    app: nexus
+  ports:
+    - port: 8081 
+  type: LoadBalancer  
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -6,28 +18,14 @@ metadata:
   labels:
     app: nexus
 spec:
-  ports:
-      port: 8081 
   selector:
     app: nexus
-  clusterIP: None
-  
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: gitlab-ext
-  labels:
-    app: nexus
-spec:
+  type: ClusterIP
   ports:
     - port: 8081 
-  selector:
-    app: nexus
-  type: LoadBalancer  
-
- ---
- 
+      protocol: TCP
+      targetPort: 8081
+---
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
