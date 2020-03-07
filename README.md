@@ -1,5 +1,6 @@
-The sketch is based on the article
+The sketch is based on the articles
 https://medium.com/faun/deploying-and-scaling-jenkins-on-kubernetes-2cd4164720bd
+https://github.com/jenkinsci/kubernetes-plugin
 
 Some preparations:
 

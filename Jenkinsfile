@@ -10,6 +10,7 @@ pipeline {
       
         container('maven') {
           sh 'mvn -version'
+          sh 'kubectl get po'
         }
         container('busybox') {
           sh '/bin/busybox'
