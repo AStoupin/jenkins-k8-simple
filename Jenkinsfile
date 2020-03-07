@@ -22,16 +22,16 @@ spec:
 """
     }
   }
-  stages {
+  /*stages {
     stage('Run maven') {
       steps {
-        /*container('maven') {
+        container('maven') {
           sh 'mvn -version'
-        }*/
+        }
         container('busybox') {
           sh '/bin/busybox'
         }
       }
     }
-  }
+  }*/
 }
