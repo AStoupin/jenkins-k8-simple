@@ -15,7 +15,6 @@ pipeline {
           sh '/bin/busybox'
         }
 
-          sh 'kubectl get po'
       }
     }
      
