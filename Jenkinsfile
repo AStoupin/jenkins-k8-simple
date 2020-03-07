@@ -25,11 +25,11 @@ spec:
   stages {
     stage('Run maven') {
       steps {
-      sh 'echo ccc'
-      /*  container('maven') {
+      
+        container('maven') {
           sh 'mvn -version'
         }
-        container('busybox') {
+      /*  container('busybox') {
           sh '/bin/busybox'
         }*/
       }
