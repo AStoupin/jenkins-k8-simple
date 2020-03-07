@@ -22,6 +22,7 @@ pipeline {
           steps {
 	      container('kubectl') {
 	        sh "kubectl get pods"
+	        sh "kubectl apply -f deployment-example.yaml"
 	      }
       }
     }
