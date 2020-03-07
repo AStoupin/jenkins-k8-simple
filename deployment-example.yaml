@@ -16,6 +16,6 @@ spec:
       - name: wildfly
         image: bangnab/wildfly-oraclejdk
         ports:
-        - containerPort: 8080
+        - containerPort: 80
 
 
