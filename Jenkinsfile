@@ -14,9 +14,7 @@ pipeline {
         container('busybox') {
           sh '/bin/busybox'
         }
-        container('docker') {
-          sh 'docker images'
-        }
+        sh 'docker images'
       }
     }
      
