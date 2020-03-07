@@ -1,14 +1,15 @@
+
 apiVersion: v1
 kind: Service
 metadata:
-  name: gitlab
+  name: nexus
   labels:
-    app: gitlab
+    app: nexus
 spec:
   ports:
-      port: 80 
+      port: 8081 
   selector:
-    app: gitlab
+    app: nexus
   clusterIP: None
   
 ---
@@ -17,12 +18,12 @@ kind: Service
 metadata:
   name: gitlab-ext
   labels:
-    app: gitlab
+    app: nexus
 spec:
   ports:
-    - port: 80 
+    - port: 8081 
   selector:
-    app: gitlab
+    app: nexus
   type: LoadBalancer  
 
  ---
@@ -30,24 +31,22 @@ spec:
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-   name: gitlab
+   name: nexus
 spec:
   selector:
     matchLabels:
-      app: gitlab   
+      app: nexus   
   replicas: 1
   template:
     metadata:
       labels:
-        app: gitlab
+        app: nexus
     spec:
       containers:
-      - name: gitlab
-        image: gitlab/gitlab-ce:latest
+      - name: nexus
+        image: sonatype/nexus3
         ports:
-        - containerPort: 443
-        - containerPort: 80
-        - containerPort: 22
+        - containerPort: 8081
 
 
 
