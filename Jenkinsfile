@@ -23,7 +23,7 @@ pipeline {
 	      container('kubectl') {
 	        sh "kubectl get pods"
 	        sh "cat deployment-example.yaml"
-	        sh "kubectl delete -f deployment-example.yaml"
+	        //sh "kubectl delete -f deployment-example.yaml"
 	        sh "kubectl apply -f deployment-example.yaml"
 	      }
       }
