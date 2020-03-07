@@ -29,9 +29,9 @@ spec:
         container('maven') {
           sh 'mvn -version'
         }
-      /*  container('busybox') {
+        container('busybox') {
           sh '/bin/busybox'
-        }*/
+        }
       }
     }
   }
