@@ -12,12 +12,11 @@ metadata:
   name: service-reader
 rules:
 - apiGroups: [""] # "" indicates the core API group
-  resources: ["services","pods","pods/exec"]
-  verbs: ["get", "watch", "list","create","delete", "apply"]
+  resources: ["services","pods","pods/exec","deployments"]
+  verbs: ["get", "pods/exec", "watch", "list","create","delete", "apply"]
 - apiGroups: ["extensions", "apps"]
-  resources: ["deployments"]
-  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
-]
+  resources: ["deployments","replicasets"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete", "apply"]
   
  /*
 ---
