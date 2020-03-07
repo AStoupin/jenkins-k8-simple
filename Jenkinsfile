@@ -14,9 +14,7 @@ pipeline {
         container('busybox') {
           sh '/bin/busybox'
         }
-        container('jenkins-slave') {
-          sh 'docker images'
-        }
+
 
       }
     }
