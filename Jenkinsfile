@@ -1,12 +1,11 @@
 pipeline {
- /* agent {
+  agent {
     kubernetes {
-      yamlFile 'deployment-example.yaml'
+      yamlFile 'pod-example.yaml'
     }
-  }*/
-   agent { node { label 'master' } }
+  }
   stages {
-    /*stage('Run maven') {
+    stage('Run maven') {
       steps {
       
         container('maven') {
@@ -18,11 +17,11 @@ pipeline {
 
           sh 'kubectl get po'
       }
-    }*/
-    
-    stage('Deployument') {
-      steps {
-               sh "kubectl cluster-info"
+    }
+     
+    stage('Run kubectl') {
+      container('kubectl') {
+        sh "kubectl get pods"
       }
     }
   }
