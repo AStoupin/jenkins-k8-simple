@@ -23,7 +23,7 @@ pipeline {
 	      container('kubectl') {
 	        sh "kubectl get pods"
 	        sh "cat deployment-example.yaml"
-	        sh "kubectl create -f deployment-example.yaml"
+	        sh "kubectl appy -f deployment-example.yaml"
 	      }
       }
     }
