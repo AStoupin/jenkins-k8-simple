@@ -13,6 +13,22 @@ rules:
 - apiGroups: [""] # "" indicates the core API group
   resources: ["services","pods","pods/exec"]
   verbs: ["get", "pods/exec", "watch", "list","create","delete"]
+  
+ /*
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: service-reader-pod
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: service-reader
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace: default
+*/      
    
 2.  Give that role to default:default (jenkins account will work with)
 kubectl create clusterrolebinding service-reader-pod   --clusterrole=service-reader  --serviceaccount=default:default

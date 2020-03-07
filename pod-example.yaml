@@ -15,3 +15,7 @@ spec:
     command:
     - cat
     tty: true
+  - name: wildfly
+    image: bangnab/wildfly-oraclejdk
+    tty: true
+
