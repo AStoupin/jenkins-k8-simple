@@ -25,5 +25,10 @@ spec:
     command:
     - cat
     tty: true   
-
-  
+    
+  - name: jnlp-slave
+    image: anuphnu/jnlp-slave:v1.0.1
+    command:
+    - cat    
+    tty: true
+ 
