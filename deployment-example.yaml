@@ -1,0 +1,18 @@
+apiVersion: apps/v1beta1 # for versions before 1.6.0 use extensions/v1beta1
+kind: Deployment
+metadata:
+   name: fwildfly
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: wildfly
+    spec:
+      containers:
+      - name: wildfly
+        image: bangnab/wildfly-oraclejdk
+        ports:
+        - containerPort: 80
+
+

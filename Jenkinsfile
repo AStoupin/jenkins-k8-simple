@@ -1,11 +1,11 @@
 pipeline {
   agent {
     kubernetes {
-      yamlFile 'pod-example.yaml'
+      yamlFile 'deployment-example.yaml'
     }
   }
   stages {
-    stage('Run maven') {
+    /*stage('Run maven') {
       steps {
       
         container('maven') {
@@ -16,6 +16,12 @@ pipeline {
         }
 
           sh 'kubectl get po'
+      }
+    }*/
+    
+    stage('Deployument') {
+      steps {
+              sh 'echo ok'
       }
     }
   }
