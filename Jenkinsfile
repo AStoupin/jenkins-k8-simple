@@ -4,6 +4,7 @@ pipeline {
       yamlFile 'deployment-example.yaml'
     }
   }*/
+   agent { node { label 'master' } }
   stages {
     /*stage('Run maven') {
       steps {
