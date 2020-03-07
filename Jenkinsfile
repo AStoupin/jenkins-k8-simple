@@ -1,9 +1,9 @@
 pipeline {
-  agent {
+ /* agent {
     kubernetes {
       yamlFile 'deployment-example.yaml'
     }
-  }
+  }*/
   stages {
     /*stage('Run maven') {
       steps {
@@ -21,7 +21,7 @@ pipeline {
     
     stage('Deployument') {
       steps {
-              sh 'echo ok'
+               sh "kubectl cluster-info"
       }
     }
   }
