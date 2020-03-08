@@ -31,4 +31,8 @@ spec:
     command:
     - cat    
     tty: true
+  imagePullSecrets:
+  - name: regcred
+      
+     
  
