@@ -27,8 +27,8 @@ spec:
     - cat
     tty: true   
     
-#  - name: starter
-#    image: astoupin/starter
+  - name: starter
+    image: astoupin/starter
 #    tty: true
   imagePullSecrets:
   - name: regcred
