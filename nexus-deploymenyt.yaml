@@ -9,6 +9,9 @@ spec:
     app: nexus
   ports:
     - port: 8081 
+      name: p1
+    - port: 8082
+      name: p2
   type: LoadBalancer  
 ---
 apiVersion: v1
@@ -25,6 +28,11 @@ spec:
     - port: 8081 
       protocol: TCP
       targetPort: 8081
+      name: p1
+    - port: 8082 
+      protocol: TCP
+      targetPort: 8082      
+      name: p2
 ---
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
@@ -45,6 +53,8 @@ spec:
         image: sonatype/nexus3
         ports:
         - containerPort: 8081
+        - containerPort: 8082
+
 
 
 

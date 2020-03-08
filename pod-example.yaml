@@ -26,8 +26,8 @@ spec:
     - cat
     tty: true   
     
-  - name: jnlp-slave
-    image: anuphnu/jnlp-slave:v1.0.1
+  - name: starter
+    image: astoupin/starter
     command:
     - cat    
     tty: true
