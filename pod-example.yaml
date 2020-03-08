@@ -32,6 +32,6 @@ spec:
 #    tty: true
   imagePullSecrets:
   - name: regcred
-      
+#kubectl create secret docker-registry regcred --docker-username=astoupin --docker-password=3472Ans123      
      
  
