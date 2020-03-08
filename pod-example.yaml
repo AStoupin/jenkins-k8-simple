@@ -16,13 +16,22 @@ spec:
     command:
     - cat
     tty: true
-  - name: wildfly
-    image: bangnab/wildfly-oraclejdk
-    tty: true
-
-  - name: kubectl
-    image: lachlanevenson/k8s-kubectl:v1.8.8
-    command:
-    - cat
-    tty: true   
     
+#  - name: wildfly
+#    image: bangnab/wildfly-oraclejdk
+#    tty: true
+
+#  - name: kubectl
+#    image: lachlanevenson/k8s-kubectl:v1.8.8
+#    command:
+#    - cat
+#t   ty: true   
+    
+#  - name: starter
+#    image: astoupin/starter
+#    tty: true
+#  imagePullSecrets:
+#  - name: regcred
+      
+     
+ 
