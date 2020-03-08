@@ -26,13 +26,11 @@ spec:
     - cat
     tty: true   
     
-  - name: starter
+/*  - name: starter
     image: astoupin/starter
-    command:
-    - cat    
     tty: true
   imagePullSecrets:
   - name: regcred
       
      
- 
+ */
