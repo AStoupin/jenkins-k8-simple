@@ -17,9 +17,9 @@ spec:
     - cat
     tty: true
     
-#  - name: wildfly
-#    image: bangnab/wildfly-oraclejdk
-#    tty: true
+  - name: wildfly
+    image: bangnab/wildfly-oraclejdk
+    tty: true
 
   - name: kubectl
     image: lachlanevenson/k8s-kubectl:v1.8.8
@@ -29,9 +29,10 @@ spec:
     
   - name: starter
     image: astoupin/starter
-#    tty: true
-  imagePullSecrets:
-  - name: regcred
+    tty: true
+  #imagePullSecrets:
+  #- name: regcred
+
 #kubectl create secret docker-registry regcred --docker-username=astoupin --docker-password=3472Ans123      
      
  
